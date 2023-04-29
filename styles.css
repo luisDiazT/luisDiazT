@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@media screen and (max-width: 320px) {
+
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+html{
+  scroll-behavior: smooth;
+}
+p,h1,h2{
+  color:#0f0f0f;
+}
+html,body{
+  height: 150%;
+}
+
+/* Establecer el tamaño de fuente base y la familia de fuentes */
+body {
+  background-color:#fbfbfb ;
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    height:3000px;
+    width:100%;
+}
+
+/* Establecer el ancho máximo del contenido a la pantalla */
+.container {
+  max-width: 100%;
+}
+
+/* Hacer que las imágenes sean 100% de ancho y se ajusten al ancho del contenedor */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Establecer márgenes y relleno a 0 en enlaces */
+a {
+  text-decoration: none;
+  color:black;
+}
+
+/* Estilos de medios para dispositivos móviles */
+
+
+footer, button{
+    background-color: #af599e
+    ;
+}
+
+
+footer {
+  z-index: -2;
+  color: #fff;
+  padding: 20px;
+  height: 5vh;
+  width: 100%;
+ 
+  display: flex;
+  align-items: center;
+}
+  /* Estilos para los enlaces del footer */
+  footer a {
+    color: #fff; /* Color del texto del enlace */
+    text-decoration: none; /* Quitar subrayado del enlace */
+  }
+  
+  /* Estilos para los enlaces del footer al pasar el cursor por encima */
+  footer a:hover {
+    text-decoration: underline; /* Subrayado del enlace al pasar el cursor por encima */
+  }
+  .fotoPerfil{
+    display:grid;
+     width: 400px; /* establece el ancho deseado */
+    height: 400px; /* establece la altura deseada */
+     border-radius: 50%;
+     overflow: hidden;
+    }
+   .fotoPerfil img {
+  width: 100%; 
+  height: auto; 
+}
+#logo{
+  width:30vw;
+}
+#encabezado {
+  display: flex;
+  justify-content: space-between;  
+ 
+  
+}
+#nb-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  padding: 10px 20px;
+ 
+  z-index: 999;
+  
+}
+#nb-container figure {
+  flex-basis: 30%;
+  margin: 2%;
+}
+aside{
+  margin-right: 9%;
+
+}
+#nb-container aside {
+  display: flex;
+  justify-content: flex-end;
+}
+.nb-text-link {
+  display: block;
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.nb-text-link:hover {
+  color: #555;
+}
+hr{
+
+  margin-bottom:7%;
+  border: none;
+  height: 2px;
+  background-color: #ccc;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 
+              0 2px 2px rgba(0, 0, 0, 0.15), 
+              0 4px 4px rgba(0, 0, 0, 0.15), 
+              0 8px 8px rgba(0, 0, 0, 0.15);
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+#nb-container img {
+  width: 100%;
+  height: auto;
+}
+
+.tituloSaludo{
+  text-align:center;
+  margin:5%;
+  font-family: 'Lato', sans-serif;
+  font-weight:700;
+}
+.textoGeneral { 
+  padding: 0% 10% 10% ;
+  text-align: center;
+ 
+}
+#descargaMiCV{
+  color:white;
+  height: 3rem;
+  width:12rem;
+  border-radius: 100px;
+  margin: 8% auto;
+}
+.textoPrincipal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height:100vh;
+  
+}
+.cuadroRosayTextoHablemos{
+
+  background-color: rgba(175, 89, 158, 0.3);
+  width:90%;
+  height:40%;
+  margin:0 auto;
+  border-radius: 5%;
+}
+.cuadroRosayTextoHablemos .tituloSaludo{
+  padding:5% 0 0 0;
+  font-size: 25px;
+}
+
+
+#principal{
+  margin-top:16%
+}
+#contacto{
+  min-height: 100vh;
+}
+}
+@media screen and (min-width:321px){
+  main, hr,#nb-container aside{display:none;
+  ;}
+ 
+  .textoProx{
+    text-align: center;
+    position: absolute;
+    top: 38%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+    display:grid;
+    font-weight: 900;
+    font-size:30px;
+    font-family:'Lato'
+  }
+  .textoProx::after{
+    content: "Proximamente!";
+  }
+  #logo{
+    text-align: center;
+    position: absolute;
+    top: 2%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+    display:grid;
+    font-weight: 900;
+    font-size:30px;
+    width:12rem;
+    position: flex;
+    
+    margin:0 20%;
+  }
+}
