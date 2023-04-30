@@ -180,6 +180,9 @@ img {
   border-radius: 100px;
   margin: 8% auto;
 }
+#descargaMiCV a{
+  color: white;
+}
 .imagenesContacto{
   width:70px;
 }
@@ -215,11 +218,15 @@ img {
 #contacto footer{
   min-height: 100vh;
 }
+#contacto {
+  margin-top:75%;
+}
 .iconosContacto{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   margin-top: 15%;
+  margin-bottom: 53%;
 }
 }
 /*
