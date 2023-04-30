@@ -17,7 +17,7 @@ p,h1,h2{
   color:#0f0f0f;
 }
 html,body{
-  height: 150%;
+
 }
 
 /* Establecer el tamaño de fuente base y la familia de fuentes */
@@ -29,7 +29,7 @@ body {
     margin:0;
     display: flex;
     flex-direction: column;
-    height:3000px;
+  
     width:100%;
 }
 
@@ -78,6 +78,13 @@ footer {
   /* Estilos para los enlaces del footer al pasar el cursor por encima */
   footer a:hover {
     text-decoration: underline; /* Subrayado del enlace al pasar el cursor por encima */
+  }
+
+  footer p {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    width:100vw;
   }
   .fotoPerfil{
     display:grid;
@@ -173,6 +180,10 @@ img {
   border-radius: 100px;
   margin: 8% auto;
 }
+.imagenesContacto{
+  width:70px;
+}
+
 .textoPrincipal{
   display: flex;
   justify-content: center;
@@ -197,13 +208,26 @@ img {
 }
 
 
+
 #principal{
   margin-top:16%
 }
 #contacto{
   min-height: 100vh;
 }
+.iconosContacto{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 15%;
 }
+}
+/*
+//////////////////////////////////////////
+MEDIA QUERY
+////////////////////////////////////////////
+*/
+
 @media screen and (min-width:321px){
   main, hr,#nb-container aside{display:none;
   ;}
