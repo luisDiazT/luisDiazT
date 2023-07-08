@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-@media screen and (max-width: 320px) {
-
-
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -210,8 +208,6 @@ img {
   font-size: 25px;
 }
 
-
-
 #principal{
   margin-top:16%
 }
@@ -228,43 +224,13 @@ img {
   margin-top: 15%;
   margin-bottom: 53%;
 }
-}
+
 /*
 //////////////////////////////////////////
 MEDIA QUERY
 ////////////////////////////////////////////
 */
 
-@media screen and (min-width:321px){
-  main, hr,#nb-container aside{display:none;
-  ;}
+
  
-  .textoProx{
-    text-align: center;
-    position: absolute;
-    top: 38%;
-    left: 43%;
-    transform: translate(-50%, -50%);
-    display:grid;
-    font-weight: 900;
-    font-size:30px;
-    font-family:'Lato'
-  }
-  .textoProx::after{
-    content: "Proximamente!";
-  }
-  #logo{
-    text-align: center;
-    position: absolute;
-    top: 2%;
-    left: 23%;
-    transform: translate(-50%, -50%);
-    display:grid;
-    font-weight: 900;
-    font-size:30px;
-    width:12rem;
-    position: flex;
-    
-    margin:0 20%;
-  }
-}
+ 
