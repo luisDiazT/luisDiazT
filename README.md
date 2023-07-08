@@ -20,3 +20,5 @@ El proyecto Curriculum Vitae es una aplicación web que muestra mi experiencia p
 - HTML
 - CSS
 - JavaScript
+
+Puedes acceder a la pagina de github pages aqui: https://luisdiazt.github.io/
