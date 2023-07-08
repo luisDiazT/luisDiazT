@@ -12,51 +12,66 @@
 
 </head>
 
-<body>
+<body id="inicio">
     <header id="encabezado">
         <nav id="nb-container">
             <figure>
-                <a class="nb-text-link" href="#encabezado"> <h1>luisDiaz</h1>
+                <a class="nb-text-link" href="#inicio"> <h1 class="tituloPrincipal">luisDiaz</h1>
             </figure>
             <aside>
-                <a class="nb-text-link" href="#principal">Inicio</a>
+                <a class="nb-text-link" href="#inicio">Inicio</a>
                 <a class="nb-text-link" href="#contacto">Contacto</a>
             </aside>
         </nav>
-        <hr>
+      
     </header>
-    <section>
-        <p class="textoProx"></p>
-    </section>
+    <hr>
     <main id="principal">
+       
         <section class="textoPrincipal">
-            <figure>
+            <figure class="contenedorFoto">
                 <img class="fotoPerfil" src="./img/perfil.png" alt="">
             </figure>
-            <article>
-                <h1 class="tituloSaludo">
-                    Hola! Soy Luis
-                </h1>
+            <article class="contenedorFotoTexto">
+                <h2 class="tituloSaludo">
+                    ¡Hola! Soy Luis
+                </h2>
 
                 <p class="textoGeneral">
                     En cada uno de mis cargos, mi enfoque ha sido constante: ¿Cómo puedo mejorar aún más? Esta pregunta
                     me ha llevado a explorar nuevos enfoques y soluciones innovadoras, siempre en busca de mejorar y
                     optimizar cualquier tarea que se me presente.
                 </p>
+                
+                <button id="descargaMiCV">
+                    <a href="https://drive.google.com/uc?id=105Fl_sjR6S3avPIvXKc9LAVLRVz-9Ggg">Descargar mi CV</a>
+                </button>
             </article>
-            <button id="descargaMiCV">
-                <a href="https://drive.google.com/uc?id=105Fl_sjR6S3avPIvXKc9LAVLRVz-9Ggg">Descargar mi CV</a>
-            </button>
         </section>
+        <!-- <div class="fondoCuadrado"></div> -->
+        <div class="fondoCuadrado2">
+            <svg
+            preserveAspectRatio="none"
+            viewBox="0 0 1200 290"
+            xmlns="http://www.w3.org/2000/svg"
+            style="fill: #dda15e; width: 100%; height: 155vh; transform: rotate(180deg) scaleX(-1);"
+          >
+            <path d="M1200 200L0 16.48V0h1200v200z" />
+          </svg>
+          </div>
+      
         <section id="contacto">
-            <article class="cuadroRosayTextoHablemos">
-                <h2 class="tituloSaludo">
-                    Hablemos!
+        
+         
+            
+            <article class="cuadroHablemos">
+                <h2 class="tituloHablemos">
+                    ¡Hablemos!
                 </h2>
 
 
-                <p class="textoGeneral">
-                    Soy un desarrollador web experto en HTML, CSS, JavaScript y React. Puedo ayudarlo en la creación de
+                <p class="textoHablemos">
+                    Soy un desarrollador web experto en HTML, CSS, JavaScript y React. Puedo ayudarte en la creación de
                     aplicaciones web de alta calidad, garantizo el desarrollo de sitios web responsivos y optimizados
                     para garantizar una excelente experiencia de usuario.
                 </p>
@@ -73,7 +88,9 @@
         </section>
     </main>
     <footer>
-        <p>Codigo Latam</p>
+        
+            <quote>
+            "La persistencia y la constancia son las llaves que abren las puertas del éxito. El trabajo duro y la innovación son los motores que te llevarán más allá de ellas."</quote>
 
     </footer>
 </body>

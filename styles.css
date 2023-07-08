@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@700&family=Rajdhani:wght@400;700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -14,13 +14,17 @@ html{
 p,h1,h2{
   color:#0f0f0f;
 }
+h1{
+  font-family: 'Big Shoulders Inline Text', cursive;
+  font-size:2rem;
+}
 html,body{
 
 }
 
 /* Establecer el tamaño de fuente base y la familia de fuentes */
 body {
-  background-color:#fbfbfb ;
+  background-color:#fefae0 ;
   font-size: 18px;
   font-family: 'Lato', sans-serif;
   box-sizing: border-box;
@@ -37,10 +41,7 @@ body {
 }
 
 /* Hacer que las imágenes sean 100% de ancho y se ajusten al ancho del contenedor */
-img {
-  max-width: 100%;
-  height: auto;
-}
+
 
 /* Establecer márgenes y relleno a 0 en enlaces */
 a {
@@ -52,15 +53,12 @@ a {
 
 
 footer, button{
-    background-color: #af599e
-    ;
+    background-color: #bc6c25;
 }
 
 
 footer {
-  z-index: -2;
-  color: #fff;
-  padding: 20px;
+  padding: 2rem;
   height: 5vh;
   width: 100%;
  
@@ -78,30 +76,27 @@ footer {
     text-decoration: underline; /* Subrayado del enlace al pasar el cursor por encima */
   }
 
-  footer p {
+  footer quote {
     text-align: center;
     color: white;
     font-weight: bold;
+    font-size:0.8rem;
     width:100vw;
   }
   .fotoPerfil{
     display:grid;
-     width: 400px; /* establece el ancho deseado */
-    height: 400px; /* establece la altura deseada */
+     width: 15rem;
      border-radius: 50%;
      overflow: hidden;
+     margin-top: 5rem;
     }
-   .fotoPerfil img {
-  width: 100%; 
-  height: auto; 
-}
+
 #logo{
   width:30vw;
 }
 #encabezado {
   display: flex;
   justify-content: space-between;  
- 
   
 }
 #nb-container {
@@ -112,9 +107,8 @@ footer {
   top: 0;
   left: 0;
   right: 0;
-  background-color: #fff;
+  background-color: #606c38;
   padding: 10px 20px;
- 
   z-index: 999;
   
 }
@@ -134,7 +128,37 @@ aside{
   display: block;
   margin-left: 20px;
   text-decoration: none;
-  color: #333;
+  color: white;
+  font-size: 1.5rem;
+}
+/* .fondoCuadrado {
+  position: absolute;
+  top: -20;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #dda15e;
+  transform-origin: top right;
+  transform: skewY(-12deg);
+  z-index: -5;
+  overflow:hidden;
+  
+} */
+.fondoCuadrado2 {
+  overflow:hidden;
+  position: absolute;
+  z-index:-5;
+}
+.fondoCuadrado::after {
+  content: "";
+  position: absolute;
+  bottom: 20;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #dda15e;
+  transform-origin: bottom left;
+  transform: skewY(0deg);
 }
 
 .nb-text-link:hover {
@@ -142,10 +166,10 @@ aside{
 }
 hr{
 
-  margin-bottom:7%;
+  margin-bottom:5%;
   border: none;
   height: 2px;
-  background-color: #ccc;
+  
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 
               0 2px 2px rgba(0, 0, 0, 0.15), 
               0 4px 4px rgba(0, 0, 0, 0.15), 
@@ -160,17 +184,33 @@ img {
   height: auto;
 }
 
-.tituloSaludo{
+.tituloPrincipal{
+   color:white;
+}
+h2{
   text-align:center;
-  margin:5%;
+  margin-bottom:5%;
   font-family: 'Lato', sans-serif;
   font-weight:700;
+  font-size:2rem;
 }
+.tituloSaludo{
+  color:grey;
+}
+.tituloHablemos{
+  margin-top: 5%;
+  color:white;
+}
+
 .textoGeneral { 
+  text-align: center;
+  color: grey;
+ }
+.textoHablemos { 
   padding: 0% 10% 10% ;
   text-align: center;
- 
-}
+  color: white;
+ }
 #descargaMiCV{
   color:white;
   height: 3rem;
@@ -190,39 +230,50 @@ img {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  max-width: 800px;
-  margin: 0 auto;
-  min-height:100vh;
-  
+  margin: 0 auto;  
 }
-.cuadroRosayTextoHablemos{
+#contacto {
+  margin-top: 75vh; /* Ajusta el margen superior según tus necesidades */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Para centrar el texto dentro del cuadro */
+}
 
-  background-color: rgba(175, 89, 158, 0.3);
-  width:90%;
-  height:40%;
-  margin:0 auto;
-  border-radius: 5%;
+.cuadroHablemos {
+  background-color: #bc6c25;
+  width: 60vw;
+  height: 40%;
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
 .cuadroRosayTextoHablemos .tituloSaludo{
   padding:5% 0 0 0;
   font-size: 25px;
 }
 
-#principal{
-  margin-top:16%
+#principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh; /* Ajusta la altura mínima según tus necesidades */
 }
 #contacto footer{
   min-height: 100vh;
 }
-#contacto {
-  margin-top:75%;
-}
+
 .iconosContacto{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-top: 15%;
-  margin-bottom: 53%;
+  align-items: center;
 }
 
 /*
@@ -230,7 +281,66 @@ img {
 MEDIA QUERY
 ////////////////////////////////////////////
 */
+@media only screen and (min-width: 768px) {
+  .contenedorFotoTexto{
+    margin-top:10%;
+  }
+  #principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ajusta la altura mínima según tus necesidades */
+    text-align: left;
+    margin:5% auto;
+  }
+  .textoGeneral { 
 
+    text-align: left;
+    font-size:1.2rem;
+    line-height: 1.6;
+   
+   }
+   .fotoPerfil{
+    display:grid;
+     width: 50rem;
+     border-radius: 50%;
+     overflow: hidden;
+     margin-top: 5rem;
+    }
+  .textoPrincipal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width:60vw;
+    height: 20%;
+  }
+  .tituloSaludo{
+    text-align:left;
+  }
+  .textoPrincipal figure {
+    flex-basis: 40%; /* Ajusta el ancho de la figura según tus necesidades */
+  }
+  
+  .textoPrincipal article {
+    flex-basis: 55%; /* Ajusta el ancho del artículo según tus necesidades */
+  }
+  .tituloPrincipal{
+    font-size: 4rem;
+   
+  }
+  .iconosContacto{
+    padding: 2rem;
+    width: 30rem;
+    height: 10rem;
+  }
+
+  #contacto {
+    margin-top: 10%; 
+  }
+
+}
 
  
  
