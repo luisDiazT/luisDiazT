@@ -18,39 +18,28 @@ h1{
   font-family: 'Big Shoulders Inline Text', cursive;
   font-size:2rem;
 }
-html,body{
 
-}
-
-/* Establecer el tamaño de fuente base y la familia de fuentes */
 body {
+opacity:0;
+transition: opacity 1s ease-in !important;
   background-color:#fefae0 ;
   font-size: 18px;
   font-family: 'Lato', sans-serif;
   box-sizing: border-box;
     margin:0;
     display: flex;
-    flex-direction: column;
-  
+    flex-direction: column;  
     width:100%;
 }
 
-/* Establecer el ancho máximo del contenido a la pantalla */
 .container {
   max-width: 100%;
 }
 
-/* Hacer que las imágenes sean 100% de ancho y se ajusten al ancho del contenedor */
-
-
-/* Establecer márgenes y relleno a 0 en enlaces */
 a {
   text-decoration: none;
   color:black;
 }
-
-/* Estilos de medios para dispositivos móviles */
-
 
 footer, button{
     background-color: #bc6c25;
@@ -58,24 +47,37 @@ footer, button{
 
 
 footer {
-  padding: 2rem;
+  padding: 2rem 0rem;
   height: 5vh;
-  width: 100%;
- 
   display: flex;
   align-items: center;
 }
-  /* Estilos para los enlaces del footer */
-  footer a {
-    color: #fff; /* Color del texto del enlace */
-    text-decoration: none; /* Quitar subrayado del enlace */
-  }
-  
-  /* Estilos para los enlaces del footer al pasar el cursor por encima */
-  footer a:hover {
-    text-decoration: underline; /* Subrayado del enlace al pasar el cursor por encima */
-  }
 
+.nb-text-link {
+  color: #fff;
+  text-decoration: none; 
+  position: relative;
+  display: inline; /* Cambio a 'inline' en lugar de 'inline-block' */
+  font-size: 1.5rem;
+  padding: 0rem 0.5rem;
+  line-height: 1.8rem; /* Igualar al tamaño de la fuente */
+}
+
+.nb-text-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white; /* Color del subrayado */
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+
+.nb-text-link:hover::after {
+  transform: scaleX(0.8);
+}
   footer quote {
     text-align: center;
     color: white;
@@ -95,9 +97,10 @@ footer {
   width:30vw;
 }
 #encabezado {
+ 
   display: flex;
   justify-content: space-between;  
-  
+  width:100vw;
 }
 #nb-container {
   display: flex;
@@ -108,43 +111,30 @@ footer {
   left: 0;
   right: 0;
   background-color: #606c38;
-  padding: 10px 20px;
-  z-index: 999;
+  padding: 10px 0px;
   
 }
 #nb-container figure {
-  flex-basis: 30%;
-  margin: 2%;
+  flex-basis: 30%;  
 }
 aside{
-  margin-right: 9%;
+  margin-right: 1rem;
 
 }
 #nb-container aside {
   display: flex;
   justify-content: flex-end;
 }
-.nb-text-link {
+.titulo {
   display: block;
   margin-left: 20px;
-  text-decoration: none;
-  color: white;
-  font-size: 1.5rem;
+  color: white; 
 }
-/* .fondoCuadrado {
-  position: absolute;
-  top: -20;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #dda15e;
-  transform-origin: top right;
-  transform: skewY(-12deg);
-  z-index: -5;
-  overflow:hidden;
-  
-} */
-.fondoCuadrado2 {
+.rotarImagen:hover{
+  transform: rotate(360deg);
+  transition: transform 1s;
+}
+#fondoCuadrado2 {
   overflow:hidden;
   position: absolute;
   z-index:-5;
@@ -161,9 +151,7 @@ aside{
   transform: skewY(0deg);
 }
 
-.nb-text-link:hover {
-  color: #555;
-}
+
 hr{
 
   margin-bottom:5%;
@@ -189,7 +177,7 @@ img {
 }
 h2{
   text-align:center;
-  margin-bottom:5%;
+  margin:1.5rem 0rem;
   font-family: 'Lato', sans-serif;
   font-weight:700;
   font-size:2rem;
@@ -198,7 +186,7 @@ h2{
   color:grey;
 }
 .tituloHablemos{
-  margin-top: 5%;
+ 
   color:white;
 }
 
@@ -231,14 +219,14 @@ h2{
   align-items: center;
   flex-wrap: wrap;
   margin: 0 auto;  
+  padding:2rem;
 }
 #contacto {
-  margin-top: 75vh; /* Ajusta el margen superior según tus necesidades */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center; /* Para centrar el texto dentro del cuadro */
+  text-align: center;
 }
 
 .cuadroHablemos {
@@ -270,12 +258,28 @@ h2{
 }
 
 .iconosContacto{
+  height: 10rem;
+  width: 20rem;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 }
-
+#avatar{
+  margin-top:2rem;
+  -webkit-transition: transform 0.5s ease-in-out; /* Transición de 0.5 segundos con aceleración y desaceleración suave */
+  transition: transform 0.5s ease-in-out;
+  -webkit-transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+}
+.separadorAvatar{
+  background-color:white;
+  height: 0.1rem;
+  width:50%;
+  border-radius: 25%;  
+}
 /*
 //////////////////////////////////////////
 MEDIA QUERY
@@ -338,6 +342,15 @@ MEDIA QUERY
 
   #contacto {
     margin-top: 10%; 
+  }
+  footer quote {
+     font-size:1.2rem;
+     }
+  .textoHablemos { 
+    font-size: 1.5rem;
+    padding: 1rem 5rem;
+    margin-bottom: 2rem;
+  
   }
 
 }
